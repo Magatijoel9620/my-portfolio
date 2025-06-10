@@ -4,11 +4,11 @@ FROM node:20
 WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
 
 # Copy app code
-COPY frontend/ .
+COPY . .
 
 # Build the app (if needed)
 RUN npm run build
