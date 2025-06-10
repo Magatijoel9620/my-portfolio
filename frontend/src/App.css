@@ -1,0 +1,177 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Color Palette */
+:root {
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --header-background: #ffffff;
+  --section-background: #f9f9f9;
+  --primary-color: #3a86ff;  /* Bright blue for accents */
+  --secondary-color: #ff006e; /* Vivid pink for hover effects */
+  --highlight-color: #8338ec; /* Purple for button and icon accents */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background: #333;
+  --section-background: #444;
+  --primary-color: #3a86ff;
+  --secondary-color: #ff006e;
+  --highlight-color: #8338ec;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* App Container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: var(--header-background);
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.header .navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: var(--section-background);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect on sections */
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 15px var(--shadow-color);
+}
+
+/* Section Headings */
+section h2 {
+  color: var(--highlight-color);
+}
+
+/* Links and Buttons */
+a, button {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover, button:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Contact Form Styling */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--highlight-color);
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+  border-color: var(--primary-color);
+}
+
+button[type="submit"] {
+  background-color: var(--highlight-color);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-background);
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--primary-color);
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.2);
+}
